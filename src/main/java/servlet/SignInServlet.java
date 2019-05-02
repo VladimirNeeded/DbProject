@@ -29,7 +29,7 @@ public class SignInServlet extends HttpServlet {
         User user = new User(login, password);
         String sqlPassword = userDao.selectPassword(user.getLogin()).get();
         if (password.equals(sqlPassword)){
-            out.print("Hello, " + login);
+            out.print("You are successfully registered. Hello, " + login);
         }else {
             out.print("Login or password are not valid");
         }
