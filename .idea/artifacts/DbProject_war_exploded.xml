@@ -1,13 +1,26 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="DbProject:war exploded">
-    <output-path>$PROJECT_DIR$/out/artifacts/DbProject_war_exploded</output-path>
+    <output-path>$PROJECT_DIR$/target/DbProject-1.0-SNAPSHOT</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <exploded>true</exploded>
+        <module>DbProject</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
     <root id="root">
-      <element id="javaee-facet-resources" facet="DbProject/web/Web" />
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
           <element id="module-output" name="DbProject" />
         </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.47" />
+        </element>
       </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/target/DbProject-1.0-SNAPSHOT/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="DbProject/web/Web" />
     </root>
   </artifact>
 </component>
